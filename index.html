@@ -184,18 +184,21 @@
                         </div>
                         <div class="container">
                             <form action="sender.php" method="post" class="sent_form form">
-                                <span class="form_wrap">
-                                    <input id="lname2" type="text" name="name" class="lname input_cl" >
-                                    <label class="input_text" for="lname2">Ваше имя</label>
-                                </span>
-                                <span class="form_wrap">
-                                    <input id="lphone2" type="tel" name="phone" class="phone input_cl" required=""/>
-                                    <label class="input_text input_text2" for="lphone2">Номер телефона</label>
-                                </span>
-
-                                <input class="btn_sent button_sum" type="button" data-callme-action="submitForm" value="Отправить" />
-                                <!-- <input id="sf2" type="submit" data-callme-action="submitForm" value="Отправить" class="button_sum btn"> -->
+                                <div class="form_box">
+                                    <span class="form_wrap">
+                                        <input type="text" id="lname2" class="name lname input_cl" name="name" required>
+                                        <label class="input_text" for="lname2">Ваше имя</label>
+                                    </span>
+                                    <span class="form_wrap">
+                                        <input id="lphone2"  type="text" class="phone input_cl" name="phone" required="">
+                                        <label class="input_text input_text2" for="lphone2">Номер телефона</label>
+                                    </span>
+    
+                                    <button class="btn_sent button_sum send-form" type="button">Отправить</button>
+                                </div>
+                                <div class="status"></div>
                             </form>
+
                         </div>
                     </div>
                 </div>

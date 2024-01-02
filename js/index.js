@@ -125,7 +125,7 @@ jQuery(document).ready(function () {
     	var form = jQuery(this).closest('form');
     	
     	if ( form.valid() ) {
-    		form.css('opacity','.5');
+    		// form.css('opacity','.5');
     		var actUrl = form.attr('action');
 
     		jQuery.ajax({
@@ -136,11 +136,11 @@ jQuery(document).ready(function () {
     			success: function(data) {
     				form.html(data);
     				form.css('opacity','1');
-                    form.find('.status').html('форма отправлена успешно');
+                    form.find('.status').html('Форма отправлена успешно');
                     //$('#myModal').modal('show') // для бутстрапа
     			},
     			error:	 function() {
-    			    form.find('.status').html('серверная ошибка');
+    			    form.find('.status').html('Серверная ошибка');
     			}
     		});
     	}
