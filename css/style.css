@@ -630,6 +630,16 @@ li {
     border: 3px solid #ff000000;
 }
 
+.status_good {
+    margin: 0 auto;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 5px;
+    width: 200px;
+    border: 3px solid #ff000000;
+}
+
 .form_wrap {
     position: relative;
 }

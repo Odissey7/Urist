@@ -136,7 +136,7 @@ jQuery(document).ready(function () {
     			success: function(data) {
     				form.html(data);
     				form.css('opacity','1');
-                    form.find('.status').html('Форма отправлена успешно');
+                    form.find('.status_good').html('Форма отправлена успешно');
                     //$('#myModal').modal('show') // для бутстрапа
     			},
     			error:	 function() {
