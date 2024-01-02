@@ -634,10 +634,10 @@ li {
     margin: 0 auto;
     color: #fff;
     margin-top: 20px;
+    border-radius: 10px;
     font-size: 20px;
     padding: 5px;
-    width: 200px;
-    border: 3px solid #ff000000;
+    width: 240px;
 }
 
 .form_wrap {
