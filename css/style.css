@@ -7,7 +7,7 @@ html {
 .body {
     max-width: 2000px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #24315c;
+    /* background-color: #24315c; */
     margin: 0 auto;
 }
 
@@ -15,17 +15,38 @@ html {
 
 .background_body {
     position: fixed;
-    top: 40px;
-    max-width: 70%;
+    /* top: 40px; */
+    width: 100%;
     z-index: -1;
+    max-width: 2000px;
     object-fit: cover;
+}
+
+.background_body_mob {
+    display: none;
+}
+
+@media (max-width:888px) {
+    .background_body{
+        display: none
+    }
+
+    .background_body_mob {
+        display: flex;
+        position: fixed;
+        /* top: 40px; */
+        width: 100%;
+        z-index: -1;
+        max-width: 2000px;
+        object-fit: cover;
+    }
 }
 
 a {
     text-decoration: none;
 }
 
-@media (max-width:768px) {
+/* @media (max-width:768px) {
     .background_body {
         max-width: 100%;
         top: 2%;
@@ -46,7 +67,7 @@ a {
     .background_body {
         max-width: 35%;
     }
-}
+} */
 
 .body_wrapper {
     margin: 0 20px;
@@ -376,8 +397,110 @@ li {
 .main {
     margin-top: 200px;
     width: 100%;
+    position: relative;
 }
 
+.wrap_abs_tel {
+    position: absolute;
+    display: flex;
+    top: -105px;
+    gap: 30px;
+    right: 2%;
+}
+
+
+.tel_num_main {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    /* right: 2%; */
+    /* top: -100px; */
+    padding: 10px;
+    color: #000;
+    font-size: 20px;
+    border-radius: 30px;
+    background-color: #fff;
+    animation: telMain 3s linear infinite;
+    transition: all 0.4s linear;
+    box-shadow: 0 0 20px 0 #ffffff00;
+}
+
+@keyframes telMain {
+    0% {
+        transform: scale(1);
+        /* box-shadow: 0 0 10px 0 #fff; */
+    }
+    50% {
+        box-shadow: 0 0 20px 0 #fff;
+        transform: scale(1.2);
+    }
+    100% {
+        /* box-shadow: 0 0 10px 0 #fff; */
+        transform: scale(1);
+    }
+}
+
+.tel_num_main:hover {
+    animation-play-state: paused;
+}
+
+.img_main_tel {
+    width: 60px;
+    /* right: 19%; */
+    /* top: -105px; */
+}
+
+/* .img_main_tel_one {
+    right: 24%;
+} */
+
+
+@media (max-width:768px) {
+    .wrap_abs_tel {
+        gap: 20px;
+        left: 2%;
+        top: -70px;
+    }
+
+    .tel_num_main {
+        font-size: 16px;
+    }
+
+    .img_main_tel {
+        width: 40px;
+    }
+}
+
+@media (max-width:425px) {
+    .wrap_abs_tel {
+        gap: 15px;
+        left: 2%;
+        top: -50px;
+    }
+
+    .tel_num_main {
+        font-size: 14px;
+    }
+
+    .img_main_tel {
+        width: 35px;
+    }
+}
+@media (max-width:280px) {
+    .wrap_abs_tel {
+        gap: 12px;
+        left: 2%;
+        top: -45px;
+    }
+
+    .tel_num_main {
+        font-size: 12px;
+    }
+
+    .img_main_tel {
+        width: 30px;
+    }
+}
 
 .text_main {
     background-color: #0360fb;
@@ -482,7 +605,8 @@ li {
 .all_main_content {
     margin-top: 80px;
     padding-top: 20px;
-    background-color: #fff;
+    background-color: #ffffffb3;
+    border: 2px solid #003da6;
     border-radius: 10px;
 }
 
@@ -550,9 +674,11 @@ li {
 .work_link {
     transition: all 0.5s linear;
     border-radius: 20px;
+    border: 2px solid #0360fb;
 }
 
 .work_link:hover {
+    border: 2px solid #1bb530;
     transition: all 0.5s linear;
     background-color: #1bb530;
 }
@@ -601,7 +727,7 @@ li {
     margin-top: 60px;
     background-color: #0000008c;
     border-radius: 20px;
-    /* padding: 30px 0; */
+    padding: 30px 0 0;
 }
 
 .need_call_wrap {
@@ -815,9 +941,15 @@ li {
 
 .footer {
     margin-top: 200px;
-    background-color: #000;
+    background-color: #0000008c;
     border-radius: 20px;
     color: #fff;
+}
+
+@media (max-width:768px) {
+    .footer {
+        margin-top: 100px;
+    }
 }
 
 .footer_wrapper {
@@ -857,6 +989,12 @@ li {
     align-items: center;
 }
 
+.plase_text {
+    margin: 0;
+    margin-top: 20px;
+    width: 70%;
+}
+
 
 .footer_list {
     padding: 0;
@@ -882,7 +1020,7 @@ li {
     transition: all 0.5s linear;
     transform: translateX(10px);
     color: #1bb530;
-    text-shadow: 0 3px 10px #fff;
+    /* text-shadow: 0 3px 10px #fff; */
 }
 
 .footer_text_second:hover {
@@ -926,6 +1064,13 @@ li {
     }
 }
 
+@media (max-width:685px) {
+    .footer_text {
+        font-size: 13px;
+        width: 180px;
+    }
+}
+
 
 /* FORM */
 
@@ -934,9 +1079,9 @@ label.error{
     display: none!important;
 }
 
-.form_fiz {
+/* .form_fiz {
     margin-top: 200px;
-}
+} */
 
 .form_box_fiz {
     grid-template-columns: repeat(2, 1fr);
@@ -1049,7 +1194,21 @@ form button {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 90px);
+    grid-template-rows: repeat(6, 100px);
+    align-items: center;
+}
+
+@media (max-width:520px) {
+    .all_fiz_list {
+        grid-template-rows: repeat(9, 90px);
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width:400px) {
+    .all_fiz_list {
+        grid-template-rows: repeat(18, 90px);
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .all_fiz_href {
@@ -1058,7 +1217,7 @@ form button {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #ffffffb3;
     transition: all 0.5s linear;
 }
 
@@ -1074,6 +1233,7 @@ form button {
 }
 
 .all_work_text {
+    padding: 5px;
     color: #000;
 }
 
@@ -1152,12 +1312,48 @@ form button {
 
 @media (max-width:660px) {
     .footer_text {
-        font-size: 14px;
+        font-size: 12px;
+        width: 150px;
     }
 
     .second_text {
         font-size: 20px;
     }
+}
+
+@media (max-width:585px) {
+    .plase_text {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width:435px) {
+    .plase_text {
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width:412px) {
+    .plase_text {
+        font-size: 8px;
+    }
+
+}
+@media (max-width:350px) {
+    .plase_text {
+        font-size: 8px;
+        width: 80%;
+    }
+
+}
+@media (max-width:338px) {
+    .plase_text {
+        font-size: 7px;
+        width: 85%;
+    }
+
 }
 @media (max-width:550px) {
     .footer_text {
