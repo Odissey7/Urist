@@ -4,6 +4,7 @@
 document.querySelector('.burger').onclick = function () {
     document.querySelector('.burger').classList.toggle('active');
     document.querySelector('.mobel_nav_list').classList.toggle('mobel_nav_list-active');
+    document.querySelector('.wrap_abs_tel').classList.toggle('wrap_abs_tel-active');
 }
 
 
