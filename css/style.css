@@ -141,6 +141,7 @@ li {
 
 .nav_link_wrapper {
     position: relative;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -171,8 +172,8 @@ li {
 
 .nav_text_wrapper {
     /* min-width: 150px; */
-    /* height: 60px; */
-    /* display: flex; */
+    height: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -350,8 +351,7 @@ li {
 }
 
 
-/* При разрешении экрана 900px и ниже, выводим на экран иконку бургера */
-@media (max-width: 768px) {
+@media (max-width: 810px) {
 
     .header_nav_list {
         display: none;
@@ -370,7 +370,7 @@ li {
 }
 
 
-@media (min-width:769px) {
+@media (min-width:810px) {
     .mobel_nav_list {
         display: none;
     }
@@ -401,12 +401,10 @@ li {
 }
 
 .wrap_abs_tel {
-    position: absolute;
     display: flex;
-    top: -105px;
     z-index: 999;
     gap: 30px;
-    right: 2%;
+    scale: 0.8;
 }
 
 .wrap_abs_tel-active {
@@ -425,9 +423,10 @@ li {
     font-size: 20px;
     border-radius: 30px;
     background-color: #fff;
-    animation: telMain 3s linear infinite;
+    /* animation: telMain 3s linear infinite; */
     transition: all 0.4s linear;
     box-shadow: 0 0 20px 0 #ffffff00;
+    transition: all 0.5s linear;
 }
 
 @keyframes telMain {
@@ -446,7 +445,11 @@ li {
 }
 
 .tel_num_main:hover {
-    animation-play-state: paused;
+    scale: 1.1;
+    transition: all 0.5s linear;
+    box-shadow: 0 0 20px 0 #fff;
+
+    /* animation-play-state: paused; */
 }
 
 .img_main_tel {
@@ -508,10 +511,11 @@ li {
 }
 
 .text_main {
-    background-color: #0360fb;
+    /* background-color: #0360fb; */
     border-radius: 20px;
     text-align: center;
-    width: 700px;
+    width: 90%;
+    text-transform: uppercase;
     color: #fff;
     font-size: 40px;
     margin: 0;
@@ -519,22 +523,40 @@ li {
     padding: 5px;
 }
 
+.text_main_sec {
+    font-size: 15px;
+}
+
 
 .content_wrap {
     margin-top: 40px;
     text-align: center;
+    align-items: center;
+}
+
+.wrap_main_tel {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
 }
 
 @media (max-width:730px) {
+    .text_main_sec {
+        font-size: 9px;
+    }
+
     .text_main {
         font-size: 30px;
-        width: 500px;
+        /* width: 500px; */
     }
 }
 @media (max-width:530px) {
     .text_main {
         font-size: 23px;
-        width: 350px;
+        /* width: 350px; */
     }
 
 }
@@ -545,7 +567,15 @@ li {
     }
 }
 
+.wrap_form_main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
 .numder_but {
+    border: none;
     text-transform: capitalize;
     border-radius: 20px;
     font-size: 20px;
@@ -553,12 +583,21 @@ li {
     color: #fff;
     cursor: pointer;
     padding: 20px;
-    background-color: #1bb530;
+    background-color: #b51b1b;
     transition: all 0.5s linear;
+    /* width: 50%; */
 } 
+
+.numder_but:hover {
+    transition: all 0.5s linear;
+    scale: 1.04;
+    box-shadow: 0 0 10px 0 #b51b1b;
+
+}
 
 .button_wrap {
     transition: all 0.5s linear;
+    display: flex;
 }
 .button_wrap:hover {
     transition: all 0.5s linear;
@@ -567,26 +606,42 @@ li {
 }
 .button_wrap:hover .numder_but {
     transition: all 0.5s linear;
-    box-shadow: 0 0 10px 0 #1bb530;
+    box-shadow: 0 0 10px 0 #b51b1b;
 }
 
-@media (max-width:730px) {
+@media (max-width:1040px) {
     .numder_but {
         padding: 15px;
         font-size: 16px;
     }
 }
-@media (max-width:530px) {
+@media (max-width:760px) {
     .numder_but {
-        font-size: 13px;
+        padding: 12px;
+        font-size: 14px;
     }
+}
+@media (max-width:710px) {
+    .wrap_main_tel {
+        width: 80%;
+    }
+
+    .numder_but {
+        padding: 11px;
+        font-size: 12px;
+    }
+}
+@media (max-width:530px) {
+    /* .numder_but {
+        font-size: 13px;
+    } */
     .content_wrap {
         margin-top: 25px;
     }
 }
 @media (max-width:380px) {
     .numder_but {
-        padding: 12px;
+        padding: 11px;
         font-size: 10px;
     }
 
@@ -608,7 +663,7 @@ li {
 
 
 .all_main_content {
-    margin-top: 80px;
+    /* margin-top: 80px; */
     padding-top: 20px;
     background-color: #ffffffb3;
     border: 2px solid #003da6;
@@ -723,6 +778,13 @@ li {
     white-space: nowrap;
     background-color: #1bb530;
     margin-bottom: 30px;
+    transition: all 0.5s linear;
+}
+
+.btn_more:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px #1bb530;
+    transition: all 0.5s linear;
 }
 
 
@@ -806,6 +868,7 @@ li {
 
 
 .input_cl {
+    cursor: pointer;
     padding: 15px;
     font-size: 16px;
     width: 300px;
@@ -869,10 +932,17 @@ li {
 }
 
 @media (max-width:660px) {
+
+    
     .input_cl {
         height: 40px;
         width: 150px;
         font-size: 12px;
+    }
+
+    .input_cl_sec {
+        width: 200px;
+        height: 50px;
     }
 
     .button_sum {
@@ -890,6 +960,19 @@ li {
         top: -20px;
     }
 }
+
+@media (max-width:540px) {
+
+    .numder_but {
+        height: 40px;
+    }
+    
+    .input_cl_sec {
+        width: 160px;
+        height: 40px;
+    }
+}
+
 @media (max-width:500px) {
     .sent_form {
         margin-top: 20px;
@@ -920,25 +1003,35 @@ li {
 }
 
 @media (max-width:350px) {
+    .wrap_form_main {
+        gap: 10px;
+    }
     .input_cl {
         height: 25px;
         width: 80px;
         font-size: 7px;
     }
-
+    .input_cl_sec {
+        width: 100px;
+    }
+    
     .button_sum {
         height: 25px;
         width: 80px;
         font-size: 7px;
     }
-
+    
     .input_text {
         font-size: 8px;
     }
 }
 
-
-
+@media (max-width:325px) {
+    .numder_but {
+        font-size: 8px;
+        padding: 8px;
+    }
+}
 
 
 
@@ -1134,6 +1227,7 @@ form textarea {
 form button {
     height: 60px;
     width: 100%;
+    max-width: 350px;
     cursor: pointer;
 }
 
@@ -1235,10 +1329,11 @@ form button {
 .all_fiz_href:hover .all_work_text {
     transition: all 0.5s linear;
     color: #ffffff;
-
+    
 }
 
 .all_work_text {
+    transition: all 0.5s linear;
     padding: 5px;
     color: #000;
 }
@@ -1248,7 +1343,25 @@ form button {
     display: none !important;
 }
 
-@media (max-width:768px) {
+.wrap_abs_tel_sec {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s linear;
+    user-select: none;
+    pointer-events: none;
+}
+
+@media (max-width:810px) {
+    .wrap_abs_tel_sec {
+        visibility: visible;
+        transition: all 0.5s linear;
+        opacity: 1;
+        top: -55px;
+        user-select: all;
+        pointer-events: all;
+    }
+
     .main {
         margin-top: -28px;
     }
@@ -1271,26 +1384,14 @@ form button {
     }
 }
 @media (max-width:500px) {
+
+    .text_main_sec {
+        font-size: 8px;
+    }
+
     .text_noLose {
         font-size: 20px;
     }
-}
-
-@media (max-width:730px) {
-    .text_main {
-        font-size: 30px;
-        width: 500px;
-    }
-    /* .main {
-        margin-top: -85px;
-    } */
-}
-@media (max-width:530px) {
-    .text_main {
-        font-size: 23px;
-        width: 350px;
-    }
-
 }
 @media (max-width:430px) {
     .main {

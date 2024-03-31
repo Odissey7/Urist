@@ -8,7 +8,7 @@
 	$date = date ("d.m.Y"); 
 	$time = date ("h:i");
 	$from = $email;
-	$subject = "Заявка c сайта";
+	$subject = "Заявка cо страницы Трудовое право";
 
 	
 	$msg="
