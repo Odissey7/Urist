@@ -7,10 +7,6 @@ document.querySelector('.burger').onclick = function () {
     document.querySelector('.wrap_abs_tel').classList.toggle('wrap_abs_tel-active');
 }
 
-
-document.querySelector('#lname2').onclick = function () {
-    document.querySelector('.input_text').classList.add('input_text_active');
-}
 document.querySelector('#lphone2').onclick = function () {
     document.querySelector('.input_text2').classList.add('input_text_active');
 }
@@ -149,3 +145,8 @@ jQuery(document).ready(function () {
 
 
 });
+
+
+document.querySelector('#lname2').onclick = function () {
+    document.querySelector('.input_text').classList.add('input_text_active');
+}

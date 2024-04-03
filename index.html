@@ -269,27 +269,47 @@
                             </div>
                             <button class="btn_more" type="button">Показать еще</button>
                         </div>
+
+                        <div class="conkurent_wrap">
+                            <h3 class="text_conkurent">Отличия от конкурентов</h3>
+                            <ul class="conkurent_list">
+                                <li class="conkurent_item">
+                                    <img src="./img/best.png" alt="Палец вверх." class="conkurent_img">
+                                    <p class="what_conkurent">Профессионализм</p>
+                                </li>
+                                <li class="conkurent_item">
+                                    <img src="./img/cool.png" alt="Мешок с деньгами." class="conkurent_img">
+                                    <p class="what_conkurent">Лучшие условия сделки</p>
+                                </li>
+                                <li class="conkurent_item">
+                                    
+                                    <img src="./img/time.svg" alt="Часы." class="conkurent_img">
+                                    <p class="what_conkurent">Четкий регламент работы</p>
+                                </li>
+                            </ul>
+                        </div>
+
                         <div class="call_my_container" id="form_main">
                             <div class="need_call_wrap">
-                                <h2 class="text_noLose"><b>Не теряйте время!</b></h2>
-                                <p class="second_text">Давайте обсудим вашу проблему прямо сейчас</p>
-                                <p class="second_text">Оставьте номер телефона мы вам перезвоним!</p>
+                                <h2 class="text_noLose"><b>Ваш вопрос требует решения уже сейчас!</b></h2>
+                                <p class="second_text">Оставьте свой номер, и мы обсудим Ваше дело
+                                    Бесплатно и без обязательств</p>
                             </div>
                             <div class="container">
                                 <form action="./sender_all/sender.php" method="post" class="sent_form form">
-                                    <div class="form_box">
-                                        <span class="form_wrap">
+                                    <div class="form_box form_box_sec">
+                                        <!-- <span class="form_wrap">
                                             <input type="text" id="lname2" class="name lname input_cl" name="name"
                                                 required>
                                             <label class="input_text" for="lname2">Ваше имя</label>
-                                        </span>
+                                        </span> -->
                                         <span class="form_wrap">
-                                            <input id="lphone2" type="text" class="phone input_cl" name="phone"
+                                            <input id="lphone2" type="text" class="phone input_cl input_cl_ex" name="phone"
                                                 required="">
                                             <label class="input_text input_text2" for="lphone2">Номер телефона</label>
                                         </span>
 
-                                        <button class="btn_sent button_sum send-form" type="button">Отправить</button>
+                                        <button class="btn_sent button_sum button_sum_ex send-form" type="button">Отправить</button>
                                     </div>
                                     <div class="status status_good"></div>
                                 </form>
