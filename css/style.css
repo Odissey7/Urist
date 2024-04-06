@@ -139,6 +139,16 @@ li {
     justify-content: space-evenly;
 }
 
+.nav_link {
+    display: flex;
+    transition: all 0.4s linear;
+}
+
+.nav_link_sec {
+    height: 25px;
+    display: contents;
+}
+
 .nav_link_wrapper {
     position: relative;
     height: 100%;
@@ -155,6 +165,68 @@ li {
     font-size: 20px;
     text-decoration: none;
     border-radius: 20px;
+    transition: all 0.5s linear;
+    position: relative;
+}
+
+.nav_element::after {
+    content: " ";
+    position: absolute;
+    bottom: 16px;
+    background-color: #b51b1b;
+    border-radius: 20px;
+    transition: all 0.5s linear;
+    scale: 0;
+    width: 0;
+    height: 3px;
+}
+
+.nav_element_sec {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.5s linear;
+    position: relative;
+}
+
+.nav_element_sec::after {
+    content: " ";
+    position: absolute;
+    bottom: -4px;
+    background-color: #b51b1b;
+    border-radius: 20px;
+    transition: all 0.5s linear;
+    scale: 0;
+    width: 0;
+    height: 3px;
+}
+
+.nav_link:hover .nav_element::after {
+    scale: 1;
+    width: 80px;
+    transition: all 0.5s linear;
+}
+
+.nav_link:hover .nav_element_sec::after {
+    scale: 1;
+    width: 80px;
+    transition: all 0.5s linear;
+}
+
+.nav_link:active .nav_element::after {
+    scale: 1;
+    width: 80px;
+    transition: all 0.5s linear;
+}
+
+.nav_link:active .nav_element_sec::after {
+    scale: 1;
+    width: 80px;
     transition: all 0.5s linear;
 }
 
@@ -1235,6 +1307,12 @@ li {
     margin: 0;
     margin-top: 20px;
     width: 70%;
+    transition: all 0.5s linear;
+}
+
+.plase_text:hover {
+    transition: all 0.5s linear;
+    color: #1bb530;
 }
 
 
@@ -1292,7 +1370,7 @@ li {
 
 .element_text_big {
     text-align: center;
-    width: 200px;
+    /* width: 200px; */
 }
 
 @media (max-width:888px) {
