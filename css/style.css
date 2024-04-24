@@ -1490,6 +1490,7 @@ form button {
 
 .all_title_text {
     margin: 0 ;
+    color: #1bb530;
 }
 
 .all_decoretion {
@@ -1504,6 +1505,23 @@ form button {
     gap: 10px;
     margin-top: 30px;
 }
+
+.all_help_text_ex {
+    text-transform: capitalize;
+    font-size: 20px;
+    color: #1bb530;
+}
+
+.text_text_error {
+    font-size: 19px;
+    color: #fff;
+}
+
+.text_text_error_ex {
+    font-size: 20px;
+    color: #1bb530;
+}
+
 
 .container_all {
     margin-top: 100px;
