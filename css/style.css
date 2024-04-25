@@ -483,6 +483,21 @@ li {
     position: relative;
 }
 
+.iframe {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    min-height: 80%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+@media (max-width:500px) {
+    .iframe {
+        height: 200px;
+    }
+}
+
 .wrap_abs_tel {
     display: flex;
     z-index: 999;
